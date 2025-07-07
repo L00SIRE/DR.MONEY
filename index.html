@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Money - Your AI Financial Health Doctor</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="floating-money">
+            <div class="money-symbol">$</div>
+            <div class="money-symbol">€</div>
+            <div class="money-symbol">¥</div>
+            <div class="money-symbol">£</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="stethoscope-icon">$</div>
+                Dr. Money
+            </div>
+            <ul class="nav-links">
+                <li><a href="#problems">Problems</a></li>
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#demo">Try Demo</a></li>
+                <li><a href="#stories">Stories</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+            <button class="cta-button" onclick="scrollToDemo()">Try it Now</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Your <span class="highlight">Personal Financial Doctor</span></h1>
+                <p class="subtitle">
+                    Talk to Dr. Money like you would text a friend. Ask questions, get real advice, 
+                    and let our AI handle the boring stuff like payments and budgets. No spreadsheets required.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToDemo()">Start Talking to Dr. Money</button>
+                    <a href="#problems" class="btn-secondary">See What It Solves</a>
+                </div>
+            </div>
+            <div class="ai-demo">
+                <div class="chat-header">
+                    <div class="ai-avatar">Dr</div>
+                    <div>
+                        <h3>Dr. Money</h3>
+                        <p style="color: var(--text-gray); font-size: 0.9rem;">Online now</p>
+                    </div>
+                </div>
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message">
+                        <div class="message-avatar ai-avatar">Dr</div>
+                        <div class="message-content">
+                            Hey! I noticed your Netflix payment is coming up on Thursday. Want me to make sure you have enough in checking?
+                        </div>
+                    </div>
+                    <div class="message user">
+                        <div class="message-avatar">You</div>
+                        <div class="message-content">
+                            Yeah, actually can you check all my bills this week?
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="message-avatar ai-avatar">Dr</div>
+                        <div class="message-content">
+                            Sure thing! You've got Netflix ($15.99), Spotify ($9.99), and your phone bill ($67) this week. Total: $92.98. I can set up auto-pay for these if you want?
+                        </div>
+                    </div>
+                </div>
+                <div class="typing-indicator">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <span style="margin-left: 0.5rem; color: var(--text-gray); font-size: 0.9rem;">Dr. Money is typing...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Problems Section -->
+    <section class="problems" id="problems">
+        <div class="problems-container">
+            <div class="section-header">
+                <h2>The Problems We Actually Solve</h2>
+                <p style="color: var(--text-gray); font-size: 1.1rem;">
+                    Real financial stress that keeps people up at night
+                </p>
+            </div>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon missed-payment">!</div>
+                    <h3>Missing Payments by Accident</h3>
+                    <p>You remember your credit card bill at 11 PM on the due date. Again. Late fees pile up and your credit score takes hits you can't afford.</p>
+                    <div class="problem-stats">Average late fee: $39. Average credit score drop: 60-110 points</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon overspending">$</div>
+                    <h3>No Idea Where Money Goes</h3>
+                    <p>Your paycheck disappears within two weeks. You budget in your head but somehow always overspend on groceries, coffee, and stuff you don't need.</p>
+                    <div class="problem-stats">Average person overspends by $218/month on untracked expenses</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon no-savings">0</div>
+                    <h3>Can't Build an Emergency Fund</h3>
+                    <p>Every time you save $500, life happens. Car repair, medical bill, or you just spend it. You're stuck living paycheck to paycheck.</p>
+                    <div class="problem-stats">69% of Americans have less than $1000 in savings</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Dr. Money Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="how-it-works-container">
+            <div class="section-header">
+                <h2>How Dr. Money Actually Works</h2>
+                <p style="color: var(--text-gray); font-size: 1.1rem;">
+                    Real conversation, real automation, real results
+                </p>
+            </div>
+
+            <div class="conversation-example">
+                <div class="conversation-header">
+                    <span class="live-demo-badge">Live Example</span>
+                    <span style="color: var(--text-gray);">Tuesday, 2:47 PM</span>
+                </div>
+                <div class="conversation-flow">
+                    <div class="conversation-message">
+                        <div class="conv-avatar ai">Dr</div>
+                        <div class="conv-content">
+                            I see your credit card balance is $1,247. Your statement shows you usually pay around $300/month. Want me to check if paying $400 this month would save you interest?
+                        </div>
+                    </div>
+                    <div class="conversation-message user">
+                        <div class="conv-avatar user">You</div>
+                        <div class="conv-content">
+                            Yeah, do I have enough in checking for that?
+                        </div>
+                    </div>
+                    <div class="conversation-message">
+                        <div class="conv-avatar ai">Dr</div>
+                        <div class="conv-content">
+                            You have $1,834 in checking. After rent ($950) and your usual expenses, you'd have about $484 left. So $400 payment works perfectly. Should I schedule it for Friday?
+                        </div>
+                    </div>
+                    <div class="action-taken">
+                        ✓ Payment scheduled: $400 to Capital One • Friday 3/8 • Will save $23 in interest
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo -->
+    <section class="interactive-demo" id="demo">
+        <div class="demo-container">
+            <div class="section-header">
+                <h2>Try Talking to Dr. Money</h2>
+                <p style="color: var(--text-gray); font-size: 1.1rem;">
+                    Ask a question about your finances (this is just a demo)
+                </p>
+            </div>
+            <div class="demo-chat">
+                <div class="chat-messages" id="demo-messages">
+                    <div class="message">
+                        <div class="message-avatar ai-avatar">Dr</div>
+                        <div class="message-content">
+                            Hi! I'm Dr. Money. Try asking me something like "How much did I spend on food last month?" or "When is my next bill due?"
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-input-area">
+                    <input type="text" class="demo-input" placeholder="Ask Dr. Money anything..." id="demo-input" onkeypress="handleDemoEnter(event)">
+                    <button class="demo-send" onclick="sendDemoMessage()">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features with Real Examples -->
+    <section class="features" id="features">
+        <div class="features-container">
+            <div class="section-header">
+                <h2>What Dr. Money Actually Does</h2>
+                <p style="color: var(--text-gray); font-size: 1.1rem;">
+                    Specific features that solve specific problems
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-visual">
+                        <div class="calendar-visual">
+                            <div class="calendar-day paid"></div>
+                            <div class="calendar-day paid"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day upcoming"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day paid"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day upcoming"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day paid"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day upcoming"></div>
+                            <div class="calendar-day"></div>
+                        </div>
+                    </div>
+                    <h3>Never Miss a Payment Again</h3>
+                    <p>Dr. Money tracks all your bills and can automatically pay them on the best day for your cash flow. No more $39 late fees or credit score drops.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-visual">
+                        <div class="prediction-chart">
+                            <div class="chart-line"></div>
+                            <div class="chart-dots">
+                                <div class="chart-dot" style="height: 20px;"></div>
+                                <div class="chart-dot" style="height: 35px;"></div>
+                                <div class="chart-dot" style="height: 45px;"></div>
+                                <div class="chart-dot" style="height: 30px;"></div>
+                                <div class="chart-dot" style="height: 50px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Predicts Cash Flow Problems</h3>
+                    <p>Dr. Money warns you weeks before you might overdraft or come up short. Gives you time to adjust spending or move money around.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-visual" style="display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--teal-primary);">
+                        "How much can I spend on dinner tonight?"
+                    </div>
+                    <h3>Answers Money Questions Instantly</h3>
+                    <p>Instead of opening multiple apps and doing math, just ask. "Can I afford this?" "How much did I spend on gas last month?" "What's my credit score?"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real User Stories -->
+    <section class="user-stories" id="stories">
+        <div class="stories-container">
+            <div class="section-header">
+                <h2>Real Stories from Real People</h2>
+                <p style="color: var(--text-gray); font-size: 1.1rem;">
+                    How Dr. Money helped people get their finances together
+                </p>
+            </div>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-header">
+                        <div class="user-photo">SJ</div>
+                        <div class="user-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Teacher, Portland</p>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        "I was paying late fees every month because I'd forget when bills were due. Dr. Money started auto-paying everything and caught a $89 overdraft fee before it happened. Saved me $400+ last year just on fees."
+                    </div>
+                    <div class="story-impact">
+                        Impact: Went from $400/year in fees to $0 in fees
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-header">
+                        <div class="user-photo">MR</div>
+                        <div class="user-info">
+                            <h4>Mike Rodriguez</h4>
+                            <p>Software Developer, Austin</p>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        "I always wondered where my money went. Dr. Money showed me I was spending $340/month on food delivery. Not judging, just facts. I cut it to $150 and saved $2,300 in a year."
+                    </div>
+                    <div class="story-impact">
+                        Impact: Built $2,300 emergency fund by tracking spending
+                    </div>
+                </div>
+                <div class="story-card">
+                    <div class="story-header">
+                        <div class="user-photo">AL</div>
+                        <div class="user-info">
+                            <h4>Anna Lee</h4>
+                            <p>Nurse, Denver</p>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        "Dr. Money warned me three weeks before I would overdraft. I was planning a vacation and didn't realize my bills would hit while I was gone. It automatically moved money from savings to cover everything."
+                    </div>
+                    <div class="story-impact">
+                        Impact: Avoided $175 in overdraft fees and a ruined vacation
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="pricing-container">
+            <div class="section-header">
+                <h2>Simple Pricing</h2>
+                <p style="color: var(--text-gray); font-size: 1.1rem;">
+                    Most people save more than this in late fees alone
+                </p>
+            </div>
+            <div class="pricing-card">
+                <div class="price-tag">$8<span style="font-size: 1.2rem; color: var(--text-gray);">/month</span></div>
+                <div class="price-description">
+                    Everything included. Cancel anytime. No setup fees or hidden costs.
+                </div>
+                <ul class="features-list">
+                    <li>Unlimited conversations with Dr. Money</li>
+                    <li>Automatic bill payments and optimization</li>
+                    <li>Cash flow predictions and warnings</li>
+                    <li>Spending tracking and insights</li>
+                    <li>Emergency fund building</li>
+                    <li>Credit score monitoring</li>
+                    <li>Works with all US banks</li>
+                </ul>
+                <button class="btn-primary" style="width: 60%; margin-top: 2rem;">Start Your Free Week</button>
+                <p style="color: var(--text-gray); font-size: 0.9rem; margin-top: 1rem;">
+                    Free for 7 days. No credit card required.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">Dr. Money</div>
+            <p class="footer-text">Making financial wellness accessible through conversation</p>
+            <p style="color: var(--text-gray); font-size: 0.9rem;">
+                © 2025 Dr. Money. All rights reserved. | <a href="#" style="color: var(--teal-primary);">Privacy</a> | <a href="#" style="color: var(--teal-primary);">Terms</a>
+            </p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
