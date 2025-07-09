@@ -1,1 +1,5 @@
-config.js
+# Add any files you want to ignore here
+# For example:
+# *.log
+# node_modules/
+# .env
