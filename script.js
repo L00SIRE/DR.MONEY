@@ -119,3 +119,57 @@ document.querySelectorAll('.problem-card, .feature-card, .story-card, .b2b-card,
     card.style.transition = 'all 0.6s ease';
     observer.observe(card);
 });
+
+// EmailJS Contact Form Handler
+function sendEmail(formData) {
+    const templateParams = {
+        from_name: formData.get('firstName') + ' ' + formData.get('lastName'),
+        from_email: formData.get('email'),
+        company: formData.get('company') || 'Not provided',
+        inquiry_type: formData.get('inquiryType'),
+        message: formData.get('message'),
+        to_email: 'info@thedoctormoney.com'
+    };
+
+    return emailjs.send('service_aistxzy', 'template_l6yvhxx', templateParams);
+}
+
+// Contact Form Submission Handler
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const formMessage = document.getElementById('formMessage');
+            
+            // Show loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            formMessage.style.display = 'none';
+            
+            const formData = new FormData(this);
+            
+            sendEmail(formData)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    formMessage.textContent = 'Message sent successfully! We\'ll get back to you soon.';
+                    formMessage.className = 'form-message success';
+                    formMessage.style.display = 'block';
+                    contactForm.reset();
+                })
+                .catch(function(error) {
+                    console.log('FAILED...', error);
+                    formMessage.textContent = 'Sorry, there was an error sending your message. Please try again or contact us directly at info@thedoctormoney.com';
+                    formMessage.className = 'form-message error';
+                    formMessage.style.display = 'block';
+                })
+                .finally(function() {
+                    submitBtn.textContent = 'Send Message';
+                    submitBtn.disabled = false;
+                });
+        });
+    }
+});
